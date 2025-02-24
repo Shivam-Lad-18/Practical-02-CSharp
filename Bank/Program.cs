@@ -1,12 +1,14 @@
 ﻿namespace Bank
 {
-    // Creating an Class Customer_Account
+    // Creating an Class Customer_Account 
     class Customer_Account
     {
-        // Declaring three variables for class
+        // Declaring bank_name as static as bank_name is common between all objects
         static string bank_name;
-        public string customer_name;
-        public long customer_accountNo;
+        // Declaring cutomer_name as private as it need to be accessed within same class
+        private string customer_name;
+        // Declaring customer_accountNo as private as it need to be accessed within same class
+        private long customer_accountNo;
 
         // Constructor to initialize the varaiables
         Customer_Account(string customer_name, long customer_accountNo)
@@ -16,7 +18,9 @@
         }
 
         // Function to display the account details of the customer
-        void printInfo()
+        // Access modifier is private as it need to be accessed within same class only
+        // Return type is void as it does not return any data
+        private void printInfo()
         {
             // Printing the details on console
             Console.WriteLine($"\nYour account detials are as under.\n\n\n" +
